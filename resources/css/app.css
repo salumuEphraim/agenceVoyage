@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --page-bg: #020617;
+    }
+
+    body {
+        background:
+            radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 22%),
+            radial-gradient(circle at bottom right, rgba(45, 212, 191, 0.08), transparent 18%),
+            var(--page-bg);
+    }
+}
+
+@layer components {
+    .panel {
+        @apply rounded-[32px] border border-white/10 bg-slate-900/70 shadow-2xl shadow-slate-950/30 backdrop-blur-xl;
+    }
+
+    .form-field {
+        @apply w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400/20;
+    }
+}
