@@ -15,3 +15,8 @@ php artisan view:cache
 
 echo "Running database migrations..."
 php artisan migrate --force
+
+if [ "$RUN_SEEDER" = "true" ]; then
+    echo "Running database seeder..."
+    php artisan db:seed --force
+fi
