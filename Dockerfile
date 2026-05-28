@@ -14,6 +14,7 @@ WORKDIR /var/www/html
 
 COPY . .
 COPY --from=assets /app/public/build ./public/build
+COPY conf/nginx/nginx-site.conf /etc/nginx/sites-enabled/default.conf
 
 ENV SKIP_COMPOSER=1
 ENV WEBROOT=/var/www/html/public
